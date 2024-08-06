@@ -1,0 +1,463 @@
+@charset "UTF-8";
+
+/* Estilo Geral */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body {
+    background-color: black;
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.contato button {
+    background-color: #00ff08;
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    border: 0px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form .enviar input:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05);
+}
+
+h2.titulo {
+    color: white;
+    text-align: center;
+    font-size: 38px;
+}
+
+h2.titulo span {
+    color: #00ff08;
+}
+
+.social button {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: none;
+    background-color: #00ff08;
+    cursor: pointer;
+    max-width: 0px 5px;
+    transition: 0.2s;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.5s;
+}
+header nav.menu-desktop a:hover {
+    color: #fff;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0px 40px;
+}
+
+/* Estilo do Menu Mobile */
+.abrir-menu-mobile svg {
+    color: #00ff08;
+    cursor: pointer;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+.menu-mobile.abrir-menu ~ .overlay-menu {
+    display: block;
+}
+
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.menu-mobile .fechar svg {
+color: #00ff08;
+cursor: pointer;
+}
+.menu-mobile .fechar {
+    padding: 30px 5%;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #00ff08;
+    color: black;
+    transition: 1s;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.49);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* Estilo do topo do site */
+section.topo-do-site {
+    padding: 40px 4%;
+}
+section.topo-do-site .flex {
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+.topo-do-site .txt-topo-do-site h1 {
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+.topo-do-site .txt-topo-do-site h1 span {
+    color: #00ff08;
+}
+.topo-do-site .txt-topo-do-site p {
+    color: white;
+    margin: 40px 0px;   
+}
+
+
+/* Animação da imagem */
+.topo-do-site .img-topo-do-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100% {
+        top: 40px;
+    }
+}
+
+
+/* Estilo das especialidades */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    transition: 0.2s;
+    margin-top: 20px;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.455);
+}
+
+.especialidades .especialidades-box svg {
+    color: #00ff08;
+    font-size: 70px;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0px;
+}
+
+
+/* Estilo do Sobre*/
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+section.sobre .img-sobre img{
+    border-radius: 30px;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #00ff08;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 30px 0px;
+    text-align: justify;
+}
+
+
+/* Estilo no portfolio */
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.163);
+}
+
+.portfolio .flex {
+    margin-top: 60px;
+    justify-content: space-around;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #00ff08;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    background-color: #000000b8;
+    color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 24px;
+    font-weight: 600;
+    opacity: 0;
+    transition: 0.5s;
+}
+.overlay:hover {
+    opacity: 1;
+}
+
+/* Estilo do Formulário do Contato*/
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    background-color: rgb(56, 56, 56);
+    width: 100%;
+    border: 0px;
+    outline: 0px;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: white;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 100px;
+}
+
+form .enviar {
+    margin-top: 20px;
+}
+
+form .enviar input {
+    max-width: 120px;
+    background-color: #00ff08;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+/* Estilo do Rodape*/
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0px 0px 40px 10px rgba(255, 255, 255, 0.163);
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+.line-footer {
+    padding: 20px 0px;
+}
+
+.line-footer p svg {
+    color: #00ff08;
+}
+
+.line-footer p a {
+    color: white;
+}
+
+.borda {
+    border-top: 2px solid #00ff08;
+}
+
+/* Responsivo */
+@media screen and (max-width: 1110px) {
+    /* Classes Gerais*/
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.titulo {
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    /* Cabeçalho */
+    .menu-desktop, .contato {
+        display: none;
+    }
+
+    /* Topo do Site*/
+    .topo-do-site .txt-topo-do-site h1 {
+        color: white;
+        font-size: 30px;
+    }
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+    .topo-do-site .img-topo-do-site img {
+        width: 80%;
+    }
+
+    /* Estilo das especialidades */
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    /* Estilo do Sobre*/
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .social {
+        text-align: center;
+    }
+
+    .img-sobre img {
+        width: 100%;
+    }
+
+    /*  Estilo Portfolio */
+
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: auto;
+    }
+
+    .portfolio .flex {
+        gap: 60px;
+    }
+
+    /* Rodapé*/
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer .line-footer {
+        text-align: center
+    }
+}
+
+html {
+    scroll-behavior: smooth; /* Se preferir usar CSS */
+}
