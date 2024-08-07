@@ -233,6 +233,7 @@ section.sobre .flex {
 
 section.sobre .img-sobre img{
     border-radius: 30px;
+    display: none;
 }
 
 .sobre .txt-sobre {
