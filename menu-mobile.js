@@ -4,6 +4,7 @@ let overlay = document.getElementById('overlay=menu')
 let fechar = document.getElementById('fechar')
 let nav = document.getElementById('nav')
 
+/* evento click do mouse, e depois de clicar o menu receberá uma classe*/ 
 btnMenu.addEventListener('click', ()=>{       /* Pra abrir o menu*/ 
     menu.classList.add('abrir-menu')
 })
