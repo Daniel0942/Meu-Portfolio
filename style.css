@@ -460,5 +460,5 @@ footer .flex {
 }
 
 html {
-    scroll-behavior: smooth; /* Se preferir usar CSS */
+    scroll-behavior: smooth; /* Se preferir usar no CSS */
 }
